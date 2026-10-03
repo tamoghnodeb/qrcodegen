@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+   QR-Forge Studio — Global Styles
+   ────────────────────────────────────────────────────────────── */
+
+/* Google Font variable */
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-blue: #3b82f6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for WebKit */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ── Range Input (Slider) ─────────────────────────────────── */
+.slider-input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-brand-cyan);
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.slider-input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(6, 182, 212, 0.25);
+  transform: scale(1.1);
+}
+
+.slider-input::-webkit-slider-thumb:active {
+  box-shadow: 0 0 0 7px rgba(6, 182, 212, 0.2);
+  transform: scale(1.05);
+}
+
+.slider-input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-brand-cyan);
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.slider-input::-moz-range-track {
+  border: none;
+  background: transparent;
+}
+
+/* ── Keyframe Animations ────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes pulse-once {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70%  { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Tailwind arbitrary animation utilities */
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.animate-pulse-once {
+  animation: pulse-once 0.8s ease-out;
+}
+
+/* ── Glassmorphism panel helpers ───────────────────────────── */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+/* ── Focus rings for accessibility ────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Suppress native outline for elements that define their own */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Keyboard shortcut badges ─────────────────────────────── */
+kbd {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, monospace;
+  font-size: 0.7rem;
+  padding: 1px 4px;
+  background: rgba(51, 65, 85, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 4px;
+  color: #94a3b8;
+}
