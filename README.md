@@ -1,9 +1,15 @@
-# QR-Forge Studio ⚡
-
-> **A production-grade, browser-only QR Code Generator & Visual Designer.**  
-> Fulfilling **Frontend Task 1: QR Code Generator & Designer** for GDG SRM recruitment.  
-> Engineered with **Next.js 16 (App Router)**, **React 19**, **TypeScript 5**, and **Tailwind CSS v4**.  
-> **100% Client-Side • Zero Backend Dependencies • Privacy-First Architecture**
+<div align="center">
+  <h1>QR-Forge Studio ⚡</h1>
+  <p><strong>A production-grade, browser-only QR Code Generator & Visual Designer.</strong></p>
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  
+  <p>Fulfilling <strong>Frontend Task 1: QR Code Generator & Designer</strong> for GDG SRM recruitment.</p>
+  <p><em>100% Client-Side • Zero Backend Dependencies • Privacy-First Architecture</em></p>
+</div>
 
 ---
 
@@ -152,4 +158,6 @@ npm run start
 ---
 
 ## 👨‍💻 Author
+
+**Tamoghna Deb** ([@tamoghnodeb](https://github.com/tamoghnodeb))  
 Built with passion for **GDG SRM** Recruitment — Frontend Task 1.
